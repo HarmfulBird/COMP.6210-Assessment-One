@@ -22,7 +22,7 @@ function Header() {
             </div>
           </div>
 
-          <div className="center-nav .navli" id="chk2">
+          <div className="center-nav" id="chk2">
             <nav className="navbar navbar-dark">
               <button
                 className="navbar-toggler ms-auto"

@@ -106,14 +106,16 @@ header h2 {
   border: 3px solid rgb(255, 255, 255, 0.2);
 }
 
+
 .navli {
   position: absolute;
   top: 110%;
   right: 2vmin;
   background: var(--darkbg);
-  padding: 3vmin 1vmin 3vmin 3.5vmin;
+  padding: 3vmin 2vmin 3vmin 2vmin;
   border: 2px solid white;
   border-radius: 12px;
+  font-size: 50px;
 }
 
 .navbar-nav li {
@@ -127,6 +129,11 @@ header h2 {
 .navbar-nav li:first-child {
   margin-right: 15px;
   padding-right: 15px;
+}
+
+.navbar-nav li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .navbar-nav li a.active {
@@ -195,7 +202,7 @@ header h2 {
 hr {
   margin: 150px auto 70px auto;
   width: 92%;
-  height: 3px;
+  height: 5px;
   background-color: white;
 }
 
@@ -394,7 +401,7 @@ p {
   .image h1 {
     font-size: 5vmin;
   }
-  .image h1:first-of-type{
+  .image h1:first-of-type {
     bottom: 20%;
   }
   .scp-info hr {
@@ -449,7 +456,7 @@ p {
   .center-nav {
     right: 20px;
   }
-  .image h1:first-of-type{
+  .image h1:first-of-type {
     bottom: 23%;
   }
   .image h1 {
