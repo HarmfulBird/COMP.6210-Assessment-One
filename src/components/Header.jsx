@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { scps } from "../scripts/scp";
 
 function Header() {
@@ -43,7 +43,9 @@ function Header() {
                 <ul className="navbar-nav  ms-auto ">
                   {scps.map((scp) => (
                     <li key={scp.subject}>
-                      <Link to={`/scp/${scp.subject}`}>{scp.subject}</Link>
+                      <NavLink to={`/scp/${scp.subject}`}>
+                        {scp.subject}
+                      </NavLink>
                     </li>
                   ))}
                 </ul>

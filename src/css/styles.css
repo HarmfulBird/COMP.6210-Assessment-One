@@ -88,6 +88,7 @@ header h2 {
   padding: 0vmin 0vmin 0vmin 2vmin;
   margin-top: 0px;
   font-size: 2.2vmin;
+  font-weight: bold;
 }
 
 /*-------------------  Nav Bar / Mobile Nav  -------------------*/
@@ -95,7 +96,7 @@ header h2 {
 .center-nav {
   position: absolute;
   align-self: center;
-  right: 20px;
+  right: 40px;
   z-index: 1;
 }
 
@@ -110,7 +111,7 @@ header h2 {
   top: 110%;
   right: 2vmin;
   background: var(--darkbg);
-  padding: 3vmin 2vmin 3vmin 2vmin;
+  padding: 3vmin 1vmin 3vmin 3.5vmin;
   border: 2px solid white;
   border-radius: 12px;
 }
@@ -120,6 +121,7 @@ header h2 {
   padding: 0px;
   letter-spacing: 1px;
   text-wrap: nowrap;
+  font-size: 1.5rem;
 }
 
 .navbar-nav li:first-child {
@@ -127,39 +129,11 @@ header h2 {
   padding-right: 15px;
 }
 
-navbar-nav li .current {
+.navbar-nav li a.active {
   text-decoration: underline;
   text-underline-offset: 3px;
   font-weight: bold;
-}
-
-.nav-link {
-  color: #ffffff;
-  display: block;
-  font-size: 1.6vmin;
-  padding: 5px 20px 5px 10px;
-  margin: 0;
-  border-radius: 12px;
-}
-
-.nav-link:hover {
-  background-color: #ddd;
-  color: black;
-  border-radius: 12px;
-}
-
-.nav-link.active {
-  background-color: #dc143c;
-  color: #ffffff;
-}
-
-navbar li:first-child {
-  margin-right: 5px;
-  padding-right: 0;
-  border-right: none;
-}
-navbar .nav-link:first-child {
-  padding-right: 20px;
+  color: var(--color-3);
 }
 
 /*-------------------  Home/Index Page  -------------------*/
@@ -186,6 +160,7 @@ navbar .nav-link:first-child {
 
 .warning-home h1 {
   margin: 10px 0px 10px 0px;
+  font-weight: bold;
 }
 
 .warning-home h1 #warn {
@@ -194,7 +169,7 @@ navbar .nav-link:first-child {
 }
 
 .warning-home #classified {
-  letter-spacing: 3.5px;
+  letter-spacing: 1vmin;
   font-size: 13vmin;
   font-weight: bold;
 
@@ -205,15 +180,71 @@ navbar .nav-link:first-child {
 .warning-home h2 {
   padding: 0px;
   margin: 0px;
+  font-size: 1.8rem;
 }
 
 .warning-home #scp {
   margin-top: 10vmin;
 
-  font-size: 4vmin;
+  font-size: 3rem;
   letter-spacing: 1.5px;
   word-spacing: 25px;
   text-shadow: 0px 0px 20px black, 0px 0px 30px black;
+}
+
+hr {
+  margin: 150px auto 70px auto;
+  width: 92%;
+  height: 3px;
+  background-color: white;
+}
+
+.grid-container {
+  margin-bottom: 10%;
+  padding: 0px 5% 0px 5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5%;
+  width: 100%;
+}
+
+.grid-item {
+  box-sizing: border-box;
+  position: relative;
+  width: 45%;
+  height: auto;
+  aspect-ratio: 497 / 285;
+  overflow: hidden;
+  margin: 10px 0px 10px 0px;
+  border: 5px solid black;
+  border-radius: 8px;
+  background-color: var(--graybg);
+  text-align: center;
+}
+
+.grid-item img {
+  width: 100%;
+  aspect-ratio: 497 / 285;
+  object-fit: cover;
+  border-radius: calc(8px - 3px);
+  filter: brightness(50%);
+}
+
+.grid-info {
+  position: absolute;
+  bottom: 3%;
+  left: 2%;
+  padding: 5px 10px 0px 10px;
+}
+
+.grid-info h1 {
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.705);
+  border-radius: 12px;
+  padding: 10px 15px 10px 15px;
+  font-size: 250%;
 }
 
 /*--------------------------------  SCP Info  --------------------------------*/
@@ -221,12 +252,15 @@ navbar .nav-link:first-child {
 .content {
   background-color: var(--darkbg);
   color: white;
-  font-family: Inter,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
-  font-feature-settings: 'case','ss01','ss04';
+  font-family: Inter, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-feature-settings: "case", "ss01", "ss04";
   padding-bottom: 100px;
 }
 
-.content h1, h2, p{
+.content h1,
+h2,
+p {
   margin: 0px;
   padding: 0px;
 }
@@ -246,23 +280,26 @@ navbar .nav-link:first-child {
 
 .image h1 {
   font-size: 4.5vmin;
+  background-color: rgba(0, 0, 0, 0.705);
+  border-radius: 12px;
+  padding: 5px 10px 5px 10px;
 }
 
 .image h1:first-of-type {
   position: absolute;
-  bottom: 8px;
-  left: 16px;
+  padding: 5px 10px 5px 13px;
+  bottom: 18%;
+  left: 26px;
 }
 .image h1:last-of-type {
   position: absolute;
-  bottom: 8px;
-  right: 16px;
+  bottom: 2vmin;
+  left: 26px;
 }
 
 .scp-info {
   box-sizing: border-box;
   margin-top: 20px;
-
 }
 
 .scp-info hr {
@@ -275,7 +312,9 @@ navbar .nav-link:first-child {
   padding: 0px;
 }
 
-.scp-info h3, .scp-info h4, .scp-info p {
+.scp-info h3,
+.scp-info h4,
+.scp-info p {
   margin: 0px;
   padding: 0px;
 }
@@ -314,25 +353,35 @@ navbar .nav-link:first-child {
   padding: 10px 100px 20px 100px;
 }
 
-
 /*-------------------  Media queries -------------------*/
+@media (max-width: 1350px) {
+  .grid-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .grid-item {
+    width: 80%;
+  }
+}
 
 @media (max-width: 800px) {
-  .nav-link {
-    color: #ffffff;
-    display: block;
-    font-size: 1.8vmin;
-    padding: 5px 20px 5px 10px;
-    margin: 0;
-    border-radius: 12px;
+  .grid-info h1 {
+    font-size: 190%;
+  }
+  .navbar-nav li {
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 750px) {
-  .nav-link {
+  .grid-item {
+    height: auto;
+  }
+  .nav-li {
     color: #ffffff;
     display: block;
-    font-size: 2vmin;
+    font-size: 4vmin;
     padding: 5px 20px 5px 10px;
     margin: 0;
     border-radius: 12px;
@@ -344,6 +393,9 @@ navbar .nav-link:first-child {
   }
   .image h1 {
     font-size: 5vmin;
+  }
+  .image h1:first-of-type{
+    bottom: 20%;
   }
   .scp-info hr {
     height: 1px;
@@ -360,13 +412,8 @@ navbar .nav-link:first-child {
 }
 
 @media (max-width: 600px) {
-  .nav-link {
-    color: #ffffff;
-    display: block;
-    font-size: 2.2vmin;
-    padding: 5px 20px 5px 10px;
-    margin: 0;
-    border-radius: 12px;
+  .grid-info h1 {
+    font-size: 150%;
   }
   header {
     display: flex;
@@ -399,29 +446,48 @@ navbar .nav-link:first-child {
     margin-top: 0px;
     font-size: 13.244px;
   }
+  .center-nav {
+    right: 20px;
+  }
+  .image h1:first-of-type{
+    bottom: 23%;
+  }
+  .image h1 {
+    font-size: 6vmin;
+  }
+  .warning-home {
+    padding: 0vmin 2vmin 0vmin 2vmin;
+  }
+  .warning-home h2 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.1rem;
+  }
+
+  .warning-home #scp {
+    margin-top: 10vmin;
+
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    word-spacing: 25px;
+    text-shadow: 0px 0px 20px black, 0px 0px 30px black;
+  }
 }
 
-@media (max-width: 450px) {
-  .nav-link {
-    color: #ffffff;
-    display: block;
-    font-size: 2.6vmin;
-    padding: 5px 20px 5px 10px;
-    margin: 0;
-    border-radius: 12px;
+@media (max-width: 500px) {
+  .grid-info h1 {
+    font-size: 120%;
   }
 }
 
 @media (max-width: 400px) {
-  .nav-link {
-    color: #ffffff;
-    display: block;
-    font-size: 2.8vmin;
-    padding: 5px 20px 5px 10px;
-    margin: 0;
-    border-radius: 12px;
+  .grid-info h1 {
+    font-size: 100%;
   }
   .navbar-toggler {
     font-size: 1.25pc;
+  }
+  .center-nav {
+    right: 15px;
   }
 }
