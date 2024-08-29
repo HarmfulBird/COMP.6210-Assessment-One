@@ -95,7 +95,7 @@ header h2 {
 .center-nav {
   position: absolute;
   align-self: center;
-  right: 10px;
+  right: 20px;
   z-index: 1;
 }
 
