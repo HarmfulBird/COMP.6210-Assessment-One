@@ -98,14 +98,22 @@ header h2 {
   align-self: center;
   right: 40px;
   z-index: 1;
+  width: 70px;
+  height: 70px;
 }
 
 .navbar-toggler {
   align-self: center;
   color: rgb(255, 255, 255, 0.2);
   border: 3px solid rgb(255, 255, 255, 0.2);
+  width: 70px;
+  height: 50px;
 }
 
+.navbar-toggler-icon {
+  width: 35px;
+  height: 35px;
+}
 
 .navli {
   position: absolute;
